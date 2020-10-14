@@ -11,7 +11,15 @@
 |
 */
 
-Route::get('/', 'HomeController@index');
+//Route::get('/', 'HomeController@index');
+
+Route::get('/', function (){
+    return view('satu');
+});
+
+Route::get('/data-tables',function (){
+   return view('dua');
+});
 
 Route::get('/register' , 'AuthController@index')->name('register');
 
